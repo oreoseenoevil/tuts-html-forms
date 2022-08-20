@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 62.5%; /* equivalent to 10px */
+    }
+
+    #root {
+      margin: 5rem;
+      border: 1px solid #000;
+      padding: 5rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .control_input_form {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .control_input_form:nth-child(2) {
+      align-items: baseline;
+    }
+
+    label {
+      text-transform: uppercase;
+      font-weight: 700;
+      flex: .5;
+    }
+
+    .column {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      flex: 3;
+      gap: .5rem;
+    }
+
+    input {
+      flex: 3;
+      border: none;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <form>
+      <div class="control_input_form">
+        <label>Date:</label>
+        <input type="text" name="date" id="date" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="control_input_form">
+        <label>For:</label>
+        <div class="column">
+          <input type="text" name="for" id="for" placeholder="Approver's Name">
+          <input type="text" name="for" id="for" placeholder="Position">
+        </div>
+      </div>
+      <div class="control_input_form">
+        <label>Thru:</label>
+        <input type="text" name="thru" id="thru" placeholder="EMD Head Name">
+      </div>
+      <div class="control_input_form">
+        <label>Subject:</label>
+        <input type="text" name="subject" id="subject" placeholder="Subject">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
